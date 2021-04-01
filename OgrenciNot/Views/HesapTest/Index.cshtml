@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Hesap Makinesi Sayfası</h2>
+
+<form class="form-group" method="post">
+
+    <div>
+        <label>Sayı 1 :</label>
+        <input type="text" class="input-sm" name="sayi1" placeholder="İlk sayıyı giriniz.." />
+    </div>
+    <div style="margin:10px 0;">
+        <label>Sayı 2 :</label>
+        <input type="text" class="input-sm" name="sayi2" placeholder="İlk sayıyı giriniz.." />
+    </div>
+    <label>Toplama Sonucu :</label> @ViewBag.snc   <br />
+    <label>Çıkarma Sonucu :</label> @ViewBag.snc1   <br />
+    <label>Çarpma Sonucu :</label> @ViewBag.snc2   <br />
+    <label>Bölme Sonucu :</label> @ViewBag.snc3   <br />
+    <button class="btn btn-success">Hesapla</button>
+</form>

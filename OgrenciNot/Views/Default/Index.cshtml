@@ -1,0 +1,30 @@
+﻿@using OgrenciNot.Models.EntitiyFramework
+@model List<TBLDERSLER>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Ders Listesi</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Ders ID</th>
+        <th>Ders ADI</th>
+        <th>İŞLEMLER</th>
+    </tr>
+    <tbody>
+        @foreach(var ders in Model)
+        {
+        <tr>
+            <td>@ders.DERSID </td>
+            <td>@ders.DERSAD </td>
+            <td style="text-align:center;">
+            <a href="/Default/Sil/@ders.DERSID" class="btn btn-danger" >Sil</a>
+            <a href="/Default/DersGetir/@ders.DERSID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Default/YeniDers" class="btn btn-primary">Yeni Ders Ekle</a>
+

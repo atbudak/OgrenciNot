@@ -1,0 +1,53 @@
+﻿@model OgrenciNot.Models.EntitiyFramework.TBLOGRENCILER
+@{
+    ViewBag.Title = "YeniOgrenci";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Yeni Ogrenci Ekle</h2>
+
+<form class="form-group" method="post">
+    <div>
+        <label>Öğrenci Adı</label>
+        <input type="text" class="form-control" name="OGRAD" />
+    </div>
+    <div style="margin:10px 0;">
+        <label>Öğrenci Soyadı</label>
+        <input type="text" class="form-control" name="OGRSOYAD" />
+    </div>
+    <div>
+        <label>Öğrenci Fotoğrafı</label>
+        <input type="text" class="form-control" name="OGRFOTO" />
+    </div>
+    <div style="margin:10px 0;">
+        <label>Öğrenci Cinsiyet</label>
+        <input type="text" class="form-control" name="OGRCINSIYET" />
+    </div>
+    <div>
+        <label>Öğrenci Kulüp</label>
+        @Html.DropDownListFor(m => m.TBLKULUPLER.KULUPID, (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+    </div>
+    <button class="btn btn-primary" style="margin:10px 0">Öğrenci Ekle</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+@* Dropdown İşlemi
+    <div style="margin:10px 0;">
+        <label>Öğrenci Cinsiyet</label>
+        @Html.DropDownList("Cinsiyet",
+    new[]
+    {
+           new SelectListItem(){Value="1",Text="Erkek"},
+           new SelectListItem(){Value="2",Text="Kadın"}
+    }, "Cinsiyet Seçiniz...", new { @class = "form-control" })
+    </div>*@
